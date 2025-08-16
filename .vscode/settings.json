@@ -1,7 +1,22 @@
 {
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.useFlatConfig": true,
+
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-    "source.sortMembers": "explicit"
-  }
+    "source.fixAll.eslint": "explicit", // corrige via ESLint à chaque Ctrl+S
+    "source.organizeImports": "explicit" // trie/retire imports à chaque Ctrl+S
+    // "source.sortMembers": "explicit"    // garde-le commenté sauf si tu as une extension qui le gère
+  },
+
+  // Optionnel: ne formate que les lignes modifiées (si supporté)
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+
+  // Préférence Prettier (miroir de .prettierrc pour cohérence dans l'éditeur)
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.semi": true,
+  "prettier.printWidth": 100
 }
